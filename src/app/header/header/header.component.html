@@ -1,0 +1,13 @@
+<!--since currently there are only 2 users typeA and B, these
+links will be shown only to these users conditionally as per given requirement and
+no link will be shown if type of user is not known-->
+<header class="header">
+    <a alt="default image" class="logo">MYPageTitle</a>
+    <div class="header-right">
+      <a *ngIf="authService.loggedInUser === 'typeA'">MyLink1</a>
+      <a *ngIf="authService.loggedInUser === 'typeA' || authService.loggedInUser === 'typeB'">MyLink2</a>
+      <a *ngIf="authService.loggedInUser === 'typeB'">MyLink3</a>
+      <a *ngIf="authService.loggedInUser === 'typeB'">MyLink4</a>
+    </div>
+  </header>
+
