@@ -2,16 +2,16 @@
 links will be shown only to these users conditionally as per given requirement and
 no link will be shown if type of user is not known-->
 <header class="header">
-    <a alt="default image" class="logo">MYPageTitle</a>
-    <div class="header-right">
-      <a *ngIf="authService.loggedInUser === 'typeA'">MyLink1</a>
-      <a *ngIf="authService.loggedInUser === 'typeA' || authService.loggedInUser === 'typeB'">MyLink2</a>
-      <span *ngIf="authService.loggedInUser === 'typeB'">
-        <a>MyLink3</a>
-        <a>MyLink4</a>
-      </span>
-      <!--this again will be used to logout to navigate to entry screen-->
-      <a href=""> Logout</a>
-    </div>
+  <a class="logo">MYPageTitle</a>
+  <div class="header-right">
+    <a *ngIf="authService.loggedInUser === 'typeA'">MyLink1</a>
+    <a *ngIf="authService.loggedInUser === 'typeA' || authService.loggedInUser === 'typeB'">MyLink2</a>
+    <span *ngIf="authService.loggedInUser === 'typeB'">
+      <a>MyLink3</a>
+      <a>MyLink4</a>
+    </span>
+    <!--this again will be used to logout to navigate to entry -->
+    <a href=""> Logout</a>
+  </div>
   </header>
 
